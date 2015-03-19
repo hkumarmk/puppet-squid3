@@ -653,6 +653,9 @@ acl localnet src fc00::/7       # RFC 4193 local private network range
 acl localnet src fe80::/10      # RFC 4291 link-local (directly plugged) machines
 
 acl SSL_ports port 443
+<% @extra_ssl_ports.each do |port| -%>
+acl SSL_ports port <%= port %>
+<% end -%>
 acl Safe_ports port 80		# http
 acl Safe_ports port 21		# ftp
 acl Safe_ports port 443		# https
