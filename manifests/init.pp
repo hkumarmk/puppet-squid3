@@ -37,6 +37,7 @@ class squid3 (
   $ignore_expect_100    = 'off',
   $cache_mgr            = 'root',
   $forwarded_for        = 'on',
+  $extra_ssl_ports      = [],
   $client_persistent_connections = 'on',
   $server_persistent_connections = 'on',
   $maximum_object_size           = '4096 KB',
